@@ -1,0 +1,36 @@
+.button {
+    padding: 20px 78px;
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.5rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button-primary {
+    border-radius: 100px;
+    background: $color-primary;
+    border: 1px solid $color-primary;
+}
+.ico {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ico-coffe-cup {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/icon/coffee-cup.svg");
+    margin-left: 8px;
+
+}
+.button-primary .ico-coffe-cup {
+   display: none;
+}
+.button-primary:hover .ico-coffe-cup {
+    display: inline-block;
+ }
+
+  

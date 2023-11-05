@@ -5,17 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="">
     <title>Coffe House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/style.css">
 </head>
 <body>
     <header class="header">
-        <div class="wrapper">
-            <a href="#" class="logo">Logo</a>
+        <div class="wrapper header__wrapper">
+            <a href="#" class="logo"><img src="./assets/img/header/logo.png" alt="" class=""></a>
             <nav class="header__navigation">
                 <ul class="navigation">
-                    <li class="">Favorite coffe</li>
-                    <li class="">About</li>
-                    <li class="">Mobile app</li>
-                    <li class="">Contacts</li>
+                    <li class="navigation__link">Favorite coffe</li>
+                    <li class="navigation__link">About</li>
+                    <li class="navigation__link">Mobile app</li>
+                    <li class="navigation__link">Contacts</li>
                 </ul>
             </nav>
 
@@ -26,13 +30,14 @@
     </header>
 
     <section class="promo">
-        <div class="wrapper">
+        <div class="wrapper promo__wrapper">
             <div class="promo__content block-radius">
                 <h1 class=""><span class="accent-word">Enjoy</span> premium coffee at our charming cafe</h1>
                 <p class="">With its inviting atmosphere and delicious coffee options, 
                     the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-                <button class="button button-primary">Menu</button>
-            </div>>
+                <button class="button button-primary">Menu <span class="ico ico-coffe-cup"></span>
+                </button>
+            </div>
         </div>
     </section>
 
