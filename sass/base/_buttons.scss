@@ -1,36 +1,69 @@
 .button {
     padding: 20px 78px;
-    font-family: Inter;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.5rem;
+    @extend %font-add;
+    @include font($size: 16px, $weight: 600, $height: 150%);
     cursor: pointer;
     transition: all .3s;
+    &_primary {
+        max-width: 200px;
+        max-height: 64px;
+        border-radius: 100px;
+        background: $color-primary;
+        border: 1px solid $color-primary;
+    }
 }
 
-.button-primary {
+.link-button {
+    color: inherit;
+    text-decoration: none;
+    @extend %font-add;
+    @include font($size: 16px, $weight: 600, $height: 150%);
+    display: inline-flex;
+}
+
+
+.link-button__text {
+    margin-right: 8px;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+    width: 200px;
+    padding: 12px 20px;
     border-radius: 100px;
-    background: $color-primary;
-    border: 1px solid $color-primary;
-}
-.ico {
-    cursor: pointer;
-    display: inline-block;
+    border: 1px solid $color-secondary;
+    >* {
+        margin-right: 8px;
+    }
+    &:hover {
+        background-color:  $color-tag-selected;
+        color: $color-primary;
+
+        .ico-play {
+            fill: $color-primary;
+        }
+    }
 }
 
-.ico-coffe-cup {
-    width: 20px;
-    height: 20px;
-    background-image: url("../../assets/icon/coffee-cup.svg");
-    margin-left: 8px;
-
+.btn__info {
+    display: flex;
+    flex-direction: column;
 }
-.button-primary .ico-coffe-cup {
-   display: none;
-}
-.button-primary:hover .ico-coffe-cup {
-    display: inline-block;
- }
 
-  
+.btn-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid;
+}
+
+
+
+
+

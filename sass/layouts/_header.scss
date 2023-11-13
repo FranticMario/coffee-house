@@ -9,14 +9,14 @@
     justify-content: space-between;
 }
 
-.navigation {
+.header__navigation {
     display: flex;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
 }
 
-.navigation__link {
-    list-style: none;
-    padding: 0 40px 0 0;
-    cursor: pointer;
-}
+
+
+
+

@@ -1,0 +1,26 @@
+.mobile__app {
+    padding: 50px 0;
+}
+
+.mobile__content {
+    width: 630px;
+    >* {
+        margin-bottom: 40px;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.mobile__text {
+    @include font($size: 16px, $height: 150%, $weight: 400);
+}
+
+.text__info {
+    @include font($size: 10px, $height: 140%, $weight: 600);
+}
+
+.link-button__text {
+    @include font($size: 16px, $height: 150%, $weight: 600);
+
+}

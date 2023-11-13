@@ -1,13 +1,24 @@
-.promo__wrapper {
-    display: flex;
-    background: url("../../assets/img/promo/container.jpg") no-repeat;
-    padding-bottom: 100px;
-}
-.promo__content {
-    width: 530px;
-    padding: 100px;
+
+.promo {
+    padding-bottom: 50px;
 }
 
-.block-radius {
+.promo__wrapper {
+    display: flex;
+    background-image: url("../../assets/img/promo/promo.jpg");
+    background-size: cover;
+    background-position: center;
     border-radius: 40px;
+}
+
+.promo__title {
+    max-width: 530px;
+    margin: 0 0 40px;
+}
+
+.promo__text {
+    max-width: 530px;
+    margin: 0 0 40px;
+    @extend %font-add;
+    @include font($size: 16px, $weight: 400, $height: 150%, $color: $color-additional)
 }

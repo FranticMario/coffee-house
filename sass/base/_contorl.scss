@@ -1,0 +1,21 @@
+.control__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.control {
+    width: 40px;
+    height: 4px;
+    border-radius: 100px;
+    background: $color-tag-border;
+    &:hover {
+        cursor: pointer;
+        background:  $color-tag-selected;
+    }
+}
+
+
+.control-selected {
+    background:  $color-tag-selected;
+}

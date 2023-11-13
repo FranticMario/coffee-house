@@ -1,0 +1,45 @@
+.favorite {
+    padding:  50px 0;
+}
+
+.favorite__wrapper {
+    text-align: center;
+}
+
+.favorite__title {
+    margin: 0px;
+    padding-bottom: 40px;
+}
+
+.coffes {
+    width: 480px;
+}
+.coffes__text {
+    @include font($size: 16px, $height: 150%, $weight: 400);
+}
+
+.coffe__img {
+    padding-bottom: 20px;
+}
+
+.coffes__content {
+    >* {
+        margin-bottom: 16px;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.control__buttons {
+    padding-top: 40px;
+}
+
+
+.arrow-left {
+    transform: rotate(180deg);
+
+}
+
+

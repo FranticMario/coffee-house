@@ -1,0 +1,54 @@
+.ico {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ico-coffe-cup {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/icon/coffee-cup.svg")
+}
+
+.ico-hidden {
+    display: none;
+}
+
+.ico-arrow {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    // &:hover {
+    //     background:  $color-tag-selected;
+    // }
+}
+
+.ico-play {
+    width: 36px;
+    height: 36px;
+    background-image: url("../../assets/icon/play.svg")
+}
+
+.ico-apple {
+    width: 36px;
+    height: 36px;
+    background-image: url("../../assets/icon/apple.svg")
+}
+
+
+.ico-map {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/icon/pin-alt.svg")
+}
+
+.ico-tel {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/icon/phone.svg")
+}
+
+.ico-time {
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/icon//clock.svg")
+}

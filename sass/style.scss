@@ -1,4 +1,5 @@
 //Normilize
+@import "base/normalize";
 @import "../node_modules/normalize-scss/sass/normalize";
 @include normalize();
 
@@ -10,11 +11,23 @@
 @import "base/logo";
 @import "base/base";
 @import "base/buttons";
+@import "base/icons";
+@import "base/contorl";
+@import "base/tags";
+@import "base/container";
+@import "base/card";
+
 
 //Layouts
 @import "layouts/header";
+@import "layouts/columns";
 @import "layouts/wrapper";
 
 // Components
+@import "component/navigation";
 @import "component/promo";
+@import "component/favorite";
+@import "component/about";
+@import "component/mobile__app";
+@import "component/offer";
 @import "component/footer";

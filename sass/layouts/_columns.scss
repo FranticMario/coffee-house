@@ -1,0 +1,19 @@
+.layout-photo-column {
+    @include columns($width: 48.5%);
+}
+
+.layout-2-column {
+    @include columns($width: 45.5%);
+    align-items: center;
+}
+
+.layout-4-column {
+    @include columns($width: 22.7%);
+
+}
+
+.layout-1-column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
