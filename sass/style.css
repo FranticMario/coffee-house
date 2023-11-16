@@ -826,7 +826,7 @@ template {
   display: none;
 }
 
-.photo__content, .navigation__link {
+.photo__content, .navigation__link, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -898,14 +898,23 @@ h3 {
   line-height: 150%;
   color: #403F3D;
   cursor: pointer;
-  transition: all 0.3s;
 }
 .button_primary {
-  max-width: 200px;
-  max-height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
   border-radius: 100px;
   background: #E1D4C9;
   border: 1px solid #E1D4C9;
+}
+.button_primary .ico-coffe-cup {
+  display: none;
+}
+.button_primary:hover .link-button .ico-coffe-cup {
+  display: inline-block;
 }
 
 .link-button {
@@ -916,7 +925,10 @@ h3 {
   font-weight: 600;
   line-height: 150%;
   color: #403F3D;
-  display: inline-flex;
+  transition: all 0.3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .link-button__text {
@@ -968,10 +980,6 @@ h3 {
   width: 20px;
   height: 20px;
   background-image: url("../../assets/icon/coffee-cup.svg");
-}
-
-.ico-hidden {
-  display: none;
 }
 
 .ico-arrow {
