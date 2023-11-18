@@ -16,21 +16,22 @@
         border: 1px solid $color-primary;
 
         .ico-coffe-cup {
-            display: none; 
+            display: none;
         }
 
         &:hover .link-button .ico-coffe-cup {
             display: inline-block;
-
         }
     }
 }
+
 
 
 .link-button {
     color: inherit;
     text-decoration: none;
     @extend %font-add;
+    @extend %transition;
     @include font($size: 16px, $weight: 600, $height: 150%);
     transition: all .3s ease-out;
     display: flex;
@@ -41,9 +42,11 @@
 
 .link-button__text {
     margin-right: 8px;
+    @extend %transition;
 }
 
 .download-button {
+    @extend %transition;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -57,13 +60,16 @@
     }
     &:hover {
         background-color:  $color-tag-selected;
-        color: $color-primary;
-
-        .ico-play {
+        .download-path {
             fill: $color-primary;
+        }
+        .text__info, .link-button__text {
+            color: $color-primary;
         }
     }
 }
+
+
 
 .btn__info {
     display: flex;
@@ -78,7 +84,39 @@
     height: 60px;
     border-radius: 100px;
     border: 1px solid;
+    cursor: pointer;
+    @extend %transition;
+
+    &:hover {
+        background-color:  $color-tag-selected;
+        .arrow-path {
+            stroke: $color-primary
+        }
+    }
+
 }
+
+.icon-path {
+    @extend %transition;
+}
+
+.icon-svg {
+    cursor: pointer;
+    &:hover {
+        fill: $color-primary;
+        .icon-path {
+            stroke: $color-button-hover;
+        }
+
+    }
+
+}
+
+.btn-object {
+    width: 60px;
+    height: 60px;
+}
+
 
 
 

@@ -20,16 +20,17 @@
     width: 660px;
     height: 430px;
     border-radius: 20px;
-    display: flex; /* Используем flex-контейнер */
-    justify-content: center; /* Центрируем по горизонтали */
+    display: flex;
+    justify-content: center;
     align-items: center;
     @extend %transition;
 }
 
 .photo {
     object-fit: cover;
+    @extend %transition;
     &:hover {
-        transform: scale(0.9)
+        transform: scale(0.92)
     }
 }
 

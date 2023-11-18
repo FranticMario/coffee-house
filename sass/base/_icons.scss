@@ -1,32 +1,21 @@
 .ico {
     cursor: pointer;
     display: inline-block;
+    @extend %transition;
 }
 
 .ico-coffe-cup {
     width: 20px;
     height: 20px;
     background-image: url("../../assets/icon/coffee-cup.svg");
+    @extend %transition;
 }
-
 
 
 .ico-arrow {
     width: 60px;
     height: 60px;
     cursor: pointer;
-}
-
-.ico-play {
-    width: 36px;
-    height: 36px;
-    background-image: url("../../assets/icon/play.svg")
-}
-
-.ico-apple {
-    width: 36px;
-    height: 36px;
-    background-image: url("../../assets/icon/apple.svg")
 }
 
 
@@ -46,4 +35,16 @@
     width: 20px;
     height: 20px;
     background-image: url("../../assets/icon//clock.svg")
+}
+
+.ico-instagramm {
+    background-image: url("../../assets/icon/instagram.svg");
+    width: 24px;
+    height: 24px;
+}
+
+
+.download-svg {
+    width: 36px;
+    height: 36px;
 }

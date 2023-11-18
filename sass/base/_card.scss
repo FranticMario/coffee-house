@@ -6,11 +6,13 @@
     margin-bottom: 40px;
     border-radius: 40px;
     border: 1px solid  #C1B6AD;
+    cursor: pointer;
 }
 .card__img {
     object-fit: cover;
     &:hover {
-        transform: scale(0.9);
+        @extend %transition;
+        transform: scale(0.92);
     }
 }
 
