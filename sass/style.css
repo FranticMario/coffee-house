@@ -825,7 +825,7 @@ template {
   display: none;
 }
 
-.photo, .photo__content, .navigation__link, .card__img:hover, .ico-coffe-cup, .ico, .icon-path, .btn-circle, .download-button, .link-button__text, .link-button, .button {
+.photo, .photo__content, .navigation__link, .card__img:hover, .social-icon, .ico-coffe-cup, .ico, .icon-path, .btn-circle, .download-button, .link-button__text, .link-button, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -839,6 +839,7 @@ template {
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -853,6 +854,11 @@ body {
 ul {
   padding-left: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -914,8 +920,20 @@ h3 {
 }
 .button_primary:hover .link-button .ico-coffe-cup {
   display: inline-block;
+  animation: hoverLink 0.5s ease-in-out forwards;
 }
 
+@keyframes hoverLink {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+    margin-left: 8px;
+  }
+}
 .link-button {
   color: inherit;
   text-decoration: none;
@@ -930,10 +948,6 @@ h3 {
   align-items: center;
 }
 
-.link-button__text {
-  margin-right: 8px;
-}
-
 .download-button {
   display: inline-flex;
   align-items: center;
@@ -943,9 +957,7 @@ h3 {
   padding: 12px 20px;
   border-radius: 100px;
   border: 1px solid #665F55;
-}
-.download-button > * {
-  margin-right: 8px;
+  gap: 8px;
 }
 .download-button:hover {
   background-color: #665F55;
@@ -960,6 +972,8 @@ h3 {
 .btn__info {
   display: flex;
   flex-direction: column;
+  width: 92px;
+  height: 40px;
 }
 
 .btn-circle {
@@ -977,16 +991,6 @@ h3 {
 }
 .btn-circle:hover .arrow-path {
   stroke: #E1D4C9;
-}
-
-.icon-svg {
-  cursor: pointer;
-}
-.icon-svg:hover {
-  fill: #E1D4C9;
-}
-.icon-svg:hover .icon-path {
-  stroke: #403F3D;
 }
 
 .btn-object {
@@ -1038,6 +1042,18 @@ h3 {
 .download-svg {
   width: 36px;
   height: 36px;
+}
+
+.icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon:hover {
+  background-color: #E1D4C9;
+}
+.social-icon:hover .icon-path {
+  stroke: #403F3D;
 }
 
 .control__buttons {
@@ -1170,6 +1186,11 @@ h3 {
   margin-bottom: 12px;
 }
 
+.block-shadow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .header {
   padding: 20px 0 20px 0;
 }
@@ -1262,6 +1283,7 @@ h3 {
 
 .link-underline {
   position: relative;
+  gap: 8px;
 }
 .link-underline:before {
   position: absolute;

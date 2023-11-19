@@ -48,3 +48,19 @@
     width: 36px;
     height: 36px;
 }
+
+.icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.social-icon {
+    @extend %transition;
+    &:hover {
+        background-color:  $color-primary;
+        .icon-path {
+            stroke: $color-button-hover;
+        }
+
+    }
+}

@@ -17,13 +17,28 @@
 
         .ico-coffe-cup {
             display: none;
+
         }
 
         &:hover .link-button .ico-coffe-cup {
             display: inline-block;
+            animation: hoverLink 0.5s ease-in-out forwards;
         }
     }
 }
+
+@keyframes hoverLink {
+    from {
+       opacity: 0;
+       display: none;
+    }
+    to {
+       opacity: 1;
+        display: block;
+        margin-left: 8px;
+
+    }
+  }
 
 
 
@@ -41,7 +56,6 @@
 
 
 .link-button__text {
-    margin-right: 8px;
     @extend %transition;
 }
 
@@ -55,9 +69,10 @@
     padding: 12px 20px;
     border-radius: 100px;
     border: 1px solid $color-secondary;
-    >* {
-        margin-right: 8px;
-    }
+    gap: 8px;
+    // >* {
+    //     margin-right: 8px;
+    // }
     &:hover {
         background-color:  $color-tag-selected;
         .download-path {
@@ -74,6 +89,8 @@
 .btn__info {
     display: flex;
     flex-direction: column;
+    width: 92px;
+    height: 40px;
 }
 
 .btn-circle {
@@ -92,25 +109,16 @@
         .arrow-path {
             stroke: $color-primary
         }
+
     }
 
 }
+
 
 .icon-path {
     @extend %transition;
 }
 
-.icon-svg {
-    cursor: pointer;
-    &:hover {
-        fill: $color-primary;
-        .icon-path {
-            stroke: $color-button-hover;
-        }
-
-    }
-
-}
 
 .btn-object {
     width: 60px;
