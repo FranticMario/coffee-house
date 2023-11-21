@@ -58,6 +58,10 @@
 
         }
     }
+    
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .link-button.active {
@@ -75,3 +79,8 @@
     }
 }
 
+.header__navigation {
+    @include media-tablet {
+        display: none;
+    }
+}

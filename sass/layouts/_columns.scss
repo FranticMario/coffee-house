@@ -1,14 +1,27 @@
 .layout-photo-column {
     @include columns($width: 48.5%);
+
 }
 
 .layout-2-column {
     @include columns($width: 45.5%);
     align-items: center;
+    @include media-laptop {
+        @include columns($width: 100%);
+    }
 }
+
+
 
 .layout-4-column {
     @include columns($width: 22.7%);
+
+    @include media-laptop {
+        @include columns($width: 42%);
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
 
 }
 
@@ -16,4 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-mobile {
+        justify-content: center;
+    }
 }

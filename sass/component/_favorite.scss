@@ -19,21 +19,31 @@
 }
 
 .coffe__img {
-    padding-bottom: 20px;
+
+    @include media-mobile {
+        padding-bottom: 0px;
+        width: 348px;
+        height: 348px;
+    }
 }
 
 .coffes__content {
+    padding: 16px 0px 0px;
     >* {
+
         margin-bottom: 16px;
     }
     > *:last-child {
         margin-bottom: 0;
     }
-
+    @include media-mobile {
+        padding: 14px 0px 0px;
+    }
 }
 
 .control__buttons {
-    padding-top: 40px;
+    padding-top: 38px;
+
 }
 
 .arrow-svg {
@@ -44,6 +54,12 @@
 .arrow-left {
     transform: rotate(180deg);
 
+}
+
+.arrow-circle {
+    @include media-mobile {
+        display: none;
+    }
 }
 
 

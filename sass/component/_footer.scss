@@ -42,10 +42,24 @@
     .ico {
         margin-right: 8px;
     }
+    @include media-laptop {
+        gap: 21px
+     }
+
+    @include media-mobile {
+        gap: 19px
+     }
 }
 
 .contacts__info {
     height: 186px;
+    @include media-laptop {
+        margin: 100px 0px 0px 0px;
+
+     }
+    @include media-mobile {
+        margin: 40px 0px 0px 0px;
+     }
 }
 
 .location, .tel {

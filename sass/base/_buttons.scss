@@ -84,6 +84,13 @@
     }
 }
 
+.mobile__buttons {
+    @include media-mobile {
+        display: grid;
+        gap: 20px;
+     }
+}
+
 
 
 .btn__info {

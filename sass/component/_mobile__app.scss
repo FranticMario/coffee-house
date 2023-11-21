@@ -10,6 +10,22 @@
     > *:last-child {
         margin-bottom: 0;
     }
+
+    @include media-laptop {
+        width: auto;
+     }
+}
+
+.mobile__img {
+    @include media-laptop {
+        padding: 100px 30px 0 30px;
+        width: 630px;
+     }
+
+     @include media-mobile {
+        width: 348px;
+        padding: 40px 0 0;
+     }
 }
 
 .mobile__text {

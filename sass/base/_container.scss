@@ -1,4 +1,11 @@
 .container__wrapper {
     border-radius: 40px;
     padding: 100px;
+    @include media-laptop {
+        padding: 100px 60px;
+     }
+
+    @include media-mobile {
+        padding: 60px 16px;
+     }
 }

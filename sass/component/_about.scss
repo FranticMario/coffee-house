@@ -24,6 +24,10 @@
     justify-content: center;
     align-items: center;
     @extend %transition;
+
+    @include media-laptop {
+        width: 688px;
+    }
 }
 
 .photo {
@@ -36,4 +40,14 @@
 
 .photo-long {
     height: 590px;
+
+    @include media-mobile {
+     width: 348px;
+     }
+}
+
+.photo-small {
+    @include media-laptop {
+        display: none;
+    }
 }

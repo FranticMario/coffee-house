@@ -7,6 +7,13 @@
     border-radius: 40px;
     border: 1px solid  #C1B6AD;
     cursor: pointer;
+    @include media-laptop {
+        margin-bottom: 0px;
+
+        &:nth-child(n+5) {
+            display: none;
+          }
+    }
 }
 .card__img {
     object-fit: cover;
