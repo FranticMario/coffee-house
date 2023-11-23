@@ -22,6 +22,11 @@
     display: flex;
     flex-direction: column;
 }
+
 .btn-refresh  {
+    display: none;
     align-self: center;
+    @include media-laptop  {
+        display: flex;
+    }
 }

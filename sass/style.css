@@ -971,6 +971,12 @@ h3 {
 .button_primary .ico-coffe-cup {
   display: none;
 }
+@media (max-width: 1024px) {
+  .button_primary .ico-coffe-cup {
+    display: inline-block;
+    margin-left: 8px;
+  }
+}
 .button_primary:hover .link-button .ico-coffe-cup {
   display: inline-block;
   animation: hoverLink 0.5s ease-in-out forwards;
@@ -1050,6 +1056,9 @@ h3 {
   background-color: #665F55;
 }
 .btn-circle:hover .arrow-path {
+  stroke: #E1D4C9;
+}
+.btn-circle:hover .refresh-path {
   stroke: #E1D4C9;
 }
 
@@ -1146,6 +1155,11 @@ h3 {
 }
 .tags > * {
   margin-right: 16px;
+}
+@media (max-width: 380px) {
+  .tags > * {
+    margin-right: 8px;
+  }
 }
 .tags > *:last-child {
   margin-right: 0;
@@ -1710,7 +1724,13 @@ h3 {
 }
 
 .btn-refresh {
+  display: none;
   align-self: center;
+}
+@media (max-width: 1024px) {
+  .btn-refresh {
+    display: flex;
+  }
 }
 
 .footer {

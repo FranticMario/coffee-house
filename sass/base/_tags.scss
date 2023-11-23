@@ -6,6 +6,9 @@
     display: flex;
     >* {
         margin-right: 16px;
+        @include media-mobile {
+            margin-right: 8px; 
+        }
     }
     > *:last-child {
         margin-right: 0;

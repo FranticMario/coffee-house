@@ -18,6 +18,11 @@
         .ico-coffe-cup {
             display: none;
 
+            @include media-laptop {
+                display: inline-block;
+                margin-left: 8px;
+            }
+
         }
 
         &:hover .link-button .ico-coffe-cup {
@@ -114,6 +119,9 @@
     &:hover {
         background-color:  $color-tag-selected;
         .arrow-path {
+            stroke: $color-primary
+        }
+        .refresh-path {
             stroke: $color-primary
         }
 
