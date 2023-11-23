@@ -7,6 +7,9 @@
     border-radius: 40px;
     border: 1px solid  #C1B6AD;
     cursor: pointer;
+    @include media-tablet {
+        cursor: default;
+    }
     @include media-laptop {
         margin-bottom: 0px;
 

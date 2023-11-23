@@ -12,6 +12,9 @@
     &:hover {
         cursor: pointer;
         background:  $color-tag-selected;
+        @include media-tablet {
+            cursor: default;
+        }
     }
 }
 

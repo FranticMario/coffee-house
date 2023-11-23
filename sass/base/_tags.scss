@@ -7,7 +7,7 @@
     >* {
         margin-right: 16px;
         @include media-mobile {
-            margin-right: 8px; 
+            margin-right: 8px;
         }
     }
     > *:last-child {
@@ -30,12 +30,20 @@
         .img__tag {
             background:  #E1D4C9;
         }
+
     }
 
     &_bordered {
         border: 1px solid $color-tag-border;
         .img__tag {
             background:  #C1B6AD;
+        }
+    }
+    @include media-tablet {
+        &_bordered {
+            .img__tag {
+                background:  initial;
+            }
         }
     }
 
@@ -46,10 +54,14 @@
         .img__tag {
             background:  #E1D4C9;
         }
+        @include media-tablet {
+            cursor: default;
+        }
     }
 
-
 }
+
+
 
 .img__tag {
     display: flex;

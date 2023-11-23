@@ -17,6 +17,9 @@
         color: $color-primary;
         margin-right: 12px;
         cursor: pointer;
+        @include media-tablet {
+            cursor: default;
+        }
     }
 }
 

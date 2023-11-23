@@ -957,6 +957,11 @@ h3 {
   color: #403F3D;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .button {
+    cursor: default;
+  }
+}
 .button_primary {
   display: flex;
   justify-content: center;
@@ -1018,6 +1023,11 @@ h3 {
   border: 1px solid #665F55;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  .download-button {
+    cursor: default;
+  }
+}
 .download-button:hover {
   background-color: #665F55;
 }
@@ -1051,6 +1061,11 @@ h3 {
   border-radius: 100px;
   border: 1px solid;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .btn-circle {
+    cursor: default;
+  }
 }
 .btn-circle:hover {
   background-color: #665F55;
@@ -1141,6 +1156,11 @@ h3 {
   cursor: pointer;
   background: #665F55;
 }
+@media (max-width: 768px) {
+  .control:hover {
+    cursor: default;
+  }
+}
 
 .control-selected {
   background: #665F55;
@@ -1191,6 +1211,11 @@ h3 {
 .tag_bordered .img__tag {
   background: #C1B6AD;
 }
+@media (max-width: 768px) {
+  .tag_bordered .img__tag {
+    background: initial;
+  }
+}
 .tag:hover {
   background-color: #665F55;
   color: #E1D4C9;
@@ -1198,6 +1223,11 @@ h3 {
 }
 .tag:hover .img__tag {
   background: #E1D4C9;
+}
+@media (max-width: 768px) {
+  .tag:hover {
+    cursor: default;
+  }
 }
 
 .img__tag {
@@ -1237,6 +1267,11 @@ h3 {
   border-radius: 40px;
   border: 1px solid #C1B6AD;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu__card {
+    cursor: default;
+  }
 }
 @media (max-width: 1024px) {
   .menu__card {
@@ -1753,6 +1788,11 @@ h3 {
   color: #E1D4C9;
   margin-right: 12px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .social__media > * {
+    cursor: default;
+  }
 }
 
 .contacts__title {

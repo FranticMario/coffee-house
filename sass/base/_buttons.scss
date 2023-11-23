@@ -4,6 +4,9 @@
     @include font($size: 16px, $weight: 600, $height: 150%);
     cursor: pointer;
     @extend %transition;
+    @include media-tablet {
+        cursor: default;
+    }
     &_primary {
         display: flex;
         justify-content: center;
@@ -75,9 +78,9 @@
     border-radius: 100px;
     border: 1px solid $color-secondary;
     gap: 8px;
-    // >* {
-    //     margin-right: 8px;
-    // }
+    @include media-tablet {
+        cursor: default;
+    }
     &:hover {
         background-color:  $color-tag-selected;
         .download-path {
@@ -115,7 +118,9 @@
     border: 1px solid;
     cursor: pointer;
     @extend %transition;
-
+    @include media-tablet {
+        cursor: default;
+    }
     &:hover {
         background-color:  $color-tag-selected;
         .arrow-path {
