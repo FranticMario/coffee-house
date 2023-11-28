@@ -7,6 +7,8 @@
     border-radius: 40px;
     border: 1px solid  #C1B6AD;
     cursor: pointer;
+
+    animation: show 0.5s ease-in-out;
     @include media-tablet {
         cursor: default;
     }
@@ -58,3 +60,14 @@
     }
 
 }
+
+
+@keyframes show {
+    from {
+       opacity: 0;
+
+    }
+    to {
+       opacity: 1;
+    }
+  }

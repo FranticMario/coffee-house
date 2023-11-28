@@ -17,6 +17,12 @@
     @include columns($width: 22.7%);
 
     @include media-laptop {
+        @include columns($width: 33%);
+        gap: 40px;
+        padding-bottom: 40px;
+    }
+
+    @include media-tablet {
         @include columns($width: 42%);
         gap: 40px;
         padding-bottom: 40px;

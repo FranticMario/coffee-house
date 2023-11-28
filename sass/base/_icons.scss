@@ -54,6 +54,12 @@
     height: 24px;
 }
 
+// .ico__alert {
+//     background-image: url("../../assets/icon/info-empty.svg");
+//     width: 16px;
+//     height: 16px;
+// }
+
 .social-icon {
     @extend %transition;
     &:hover {

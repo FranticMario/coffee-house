@@ -15,7 +15,20 @@
     }
 }
 
+.size__tags {
+    .tag {
+            margin-right: 8px;
+    }
+}
+
+.additives {
+    .tag {
+        margin-right: 8px; 
+    }
+}
+
 .tag {
+    user-select: none;
     display: flex;
     padding: 8px 16px 8px 8px;
     justify-content: center;
@@ -23,12 +36,17 @@
     gap: 8px;
     border-radius: 100px;
     @include font($size: 16px, $height: 150%, $weight: 600);
-
+    @extend %transition;
     &_selected {
         background-color:  $color-tag-selected;
         color: $color-primary;
         .img__tag {
             background:  #E1D4C9;
+        }
+
+        .tag-icon {
+            background:  #E1D4C9;
+            color:  #403F3D;
         }
 
     }
@@ -47,12 +65,18 @@
         }
     }
 
+
+
     &:hover {
         background-color:  $color-tag-selected;
         color: $color-primary;
         cursor: pointer;
         .img__tag {
             background:  #E1D4C9;
+        }
+        .tag-icon {
+            background:  #E1D4C9;
+            color:  #403F3D;
         }
         @include media-tablet {
             cursor: default;

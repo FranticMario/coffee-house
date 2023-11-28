@@ -1,0 +1,146 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-backdrop;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modal {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 40px;
+    gap: 20px;
+    background-color: $color-additional;
+    width: 768px;
+    padding: 16px;
+    min-height: 120px;
+    max-height: 90%;
+    // overflow: auto;
+    @extend %custom-scroll;
+
+    @include media-tablet {
+        width: 90%;
+    }
+
+    .photo__card {
+        @include media-mobile {
+            display: none;
+        }
+    }
+}
+
+.modal__close-icon {
+    position: absolute;
+    top: 30px;
+    right: 26px;
+    cursor: pointer;
+    svg {
+        pointer-events: none;
+    }
+}
+
+
+.modal__description {
+    display: flex;
+    flex-direction: column;
+    max-width: 438px;
+    @include media-tablet {
+       width: 326px;
+    }
+}
+
+.modal__title {
+    margin-bottom: 12px;
+}
+
+.size__title {
+    margin-bottom: 8px;
+}
+
+
+.size__tags {
+    @include media-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .tag {
+            margin-right: 0px;
+        }
+    }
+}
+
+.additives__title {
+    margin-bottom: 8px;
+}
+
+.additives {
+    @include media-tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .tag {
+            margin-right: 0px;
+        }
+    }
+}
+
+.modal__content {
+    >* {
+        margin-bottom: 20px;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.tag-icon {
+    display: flex;
+
+
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background: #C1B6AD;
+}
+
+.button_secondary {
+    display: flex;
+    padding: 10px 78px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark, #665F55);
+
+    &:hover {
+        background:  #665F55;
+            color:  #E1D4C9;
+    }
+}
+
+.modal__price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal__alert {
+    display: flex;
+    cursor: pointer;
+    gap: 8px;
+    padding: 12px 0px;
+    border-top: 1px solid  #C1B6AD;
+    @include font($size: 10px, $height: 140%, $weight: 600);
+
+}
