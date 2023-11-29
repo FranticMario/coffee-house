@@ -7,6 +7,7 @@ window.onload = function() {
     addTagsClickHandler();
     addTagsClickHandlerSize();
     window.addEventListener('click', closeModal);
+    window.addEventListener('click', refreshCard);
 }
 
 // Constants
@@ -236,4 +237,18 @@ const closeModal = (e) => {
         document.querySelector(".overlay").remove();
         document.documentElement.style.overflow = "";
     }
+}
+
+const refreshCard = (e) => {
+   const menuCard = document.querySelectorAll(".menu__card");
+   const btnRefresh = document.querySelector(".btn-refresh")
+    menuCard.forEach(card => {
+        card.style.display = "flex";
+  
+    })
+
+    if(e.target.closest(".btn-refresh")) {
+        btnRefresh.style.display = "none";
+    }
+    
 }
