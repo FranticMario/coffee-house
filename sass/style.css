@@ -825,7 +825,7 @@ template {
   display: none;
 }
 
-.photo, .photo__content, .navigation__link, .card__img:hover, .tag, .social-icon, .ico-coffe-cup, .ico, .icon-path, .btn-circle, .download-button, .link-button__text, .link-button, .button {
+.photo, .photo__content, .navigation__link, .menu__card:hover .card__img, .tag, .social-icon, .ico-coffe-cup, .ico, .icon-path, .btn-circle, .download-button, .link-button__text, .link-button, .button {
   transition: all 0.3s ease-out;
 }
 
@@ -1310,11 +1310,8 @@ h3 {
     display: none;
   }
 }
-
-.card__img {
+.menu__card:hover .card__img {
   object-fit: cover;
-}
-.card__img:hover {
   transform: scale(0.92);
 }
 
@@ -1340,11 +1337,6 @@ h3 {
 
 .card__title {
   margin-bottom: 12px;
-}
-
-.block-shadow:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes show {

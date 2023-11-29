@@ -19,14 +19,18 @@
             display: none;
           }
     }
-}
-.card__img {
-    object-fit: cover;
-    &:hover {
-        @extend %transition;
-        transform: scale(0.92);
+    
+
+        &:hover {
+            .card__img {
+                object-fit: cover;
+                @extend %transition;
+                transform: scale(0.92);
+            }
+        }
     }
-}
+
+
 
 .photo__card {
     overflow: hidden;
@@ -53,13 +57,13 @@
     margin-bottom: 12px;
 }
 
-.block-shadow {
-    &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+// .block-shadow {
+//     &:hover {
+//         transform: scale(1.1);
+//         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+//     }
 
-}
+// }
 
 
 @keyframes show {
