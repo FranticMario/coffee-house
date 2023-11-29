@@ -1,3 +1,5 @@
+export let arr ;
+
 export class Card {
     constructor ({name, description, price, category, urlToImage, sizes, additives}) {
         this.name = name;
@@ -10,6 +12,8 @@ export class Card {
         this.popup = this.renderPopup()
     }
 
+
+
     // Card generation
     renderCard() {
         let card = document.createElement("div");
@@ -17,6 +21,10 @@ export class Card {
         card.addEventListener("click", () => {
             document.body.append(this.popup);
             document.documentElement.style.overflow = "hidden";
+        })
+
+        card.addEventListener("click", () => {
+            arr = this.price
         })
         card.innerHTML =
         `
@@ -52,13 +60,13 @@ export class Card {
                     Size
                 </p>
                 <div class="size__tags tags">
-                    <div class="tag tag_selected">
+                    <div class="tag tag_selected s">
                         <span class="size tag-icon s">S</span><span class="ml s">${this.sizes.s.size}</span>
                     </div>
-                    <div class="tag tag_bordered">
+                    <div class="tag tag_bordered m">
                         <span class="size tag-icon m">M</span><span class="ml m">${this.sizes.m.size}</span>
                     </div>
-                    <div class="tag tag_bordered">
+                    <div class="tag tag_bordered l">
                         <span class="size tag-icon l">L</span><span class="ml l">${this.sizes.l.size}</span>
                     </div>
                 </div>
@@ -67,13 +75,13 @@ export class Card {
                 <p class="additives__title">Additives</p>
                 <div class="additives tags">
                     <div class="tag tag_bordered" >
-                        <span class="additives__tag tag-icon">1</span><span class="">${this.additives[0].name}</span>
+                        <span class="additives__tag tag-icon">1</span><span class="add">${this.additives[0].name}</span>
                     </div>
                     <div class="tag tag_bordered">
-                        <span class="additives__tag tag-icon">2</span><span class="">${this.additives[1].name}</span>
+                        <span class="additives__tag tag-icon">2</span><span class="add">${this.additives[1].name}</span>
                     </div>
                     <div class="tag tag_bordered">
-                        <span class="additives__tag tag-icon">3</span><span class="">${this.additives[2].name}</span>
+                        <span class="additives__tag tag-icon">3</span><span class="add">${this.additives[2].name}</span>
                     </div>
             </div>
             </div>

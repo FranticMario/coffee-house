@@ -1,19 +1,20 @@
 import { Card } from "./js/Card.js";
-
+import { arr } from "./js/Card.js";
 window.onload = function() {
     console.log("Hello");
     getTagActive();
     loadTagMenu(anotherVariable);
     addTagsClickHandler();
-    window.addEventListener("click", addTagsClickHandlerSize)
+    addTagsClickHandlerSize();
+    window.addEventListener('click', closeModal);
 }
 
 // Constants
 const cardContainer = document.querySelector(".offer-wrapper");
 const offerTags = document.querySelectorAll(".offer__tags .tag");
-let isSizeTagClicked = false;
+let defaultPrice = 0;
 let dataArray = [];
-console.log(dataArray)
+
 // Function 
 const getTagActive = () => {
     let tags = document.querySelectorAll(".offer__tags .tag");
@@ -53,12 +54,13 @@ const addTagsClickHandler = () => {
                 addSelectedTag(clickedTag);
                 getTagActive();
                 generateCard(dataArray, cardContainer, clickedTag.innerText);
+                addClickHanderMenuCard()
 
         }
     });
 }
 
-    const removeSelectedTags = () => {
+const removeSelectedTags = () => {
     let tags = document.querySelectorAll(".offer__tags .tag");
     tags.forEach(tag => {
         console.log(tag)
@@ -114,58 +116,124 @@ const getData = async url => {
   });
 
 
-const addTagsClickHandlerSize = (e) => {
-    let sizeTag = e.target;
-    console.log(sizeTag)
-    if(sizeTag.closest(".tag")) {
- 
 
-        removeSelectedTagsModalSize(sizeTag);
-        addSelectedTag(sizeTag);
-        priceChangeSizeTag(sizeTag);
-        getTagActiveSize()
+
+const addTagsClickHandlerSize = () => {
+    window.addEventListener("click", e => {
+        let sizeTag = e.target;
+        console.log(sizeTag)
+        if(sizeTag.closest(".size__tags")) {
+    
+            changePriceSize(sizeTag, arr);
+            removeSelectedTagsModalSize();
+            addSelectedTagSize(sizeTag);
+            getNewSizePrice(defaultPrice)
+        }
+
+        if(sizeTag.closest(".additives")) {
+
+            addSelectedTagAdditivies(sizeTag);
+            getAddivitiesColection()
+        }
+    });
+    
+}
+
+const  getNewSizePrice = () => {
+    const totalPrice = document.querySelector(".modal-price");
+    let newPriceToNum = totalPrice.innerText.slice(1);
+    let newPrice = parseFloat(newPriceToNum);
+    defaultPrice = newPrice;
+}
+
+
+const addSelectedTagAdditivies = (e) => {
+
+    if(e.classList.contains("tag")) {
+        e.classList.toggle("tag_bordered");
+        e.classList.toggle("tag_selected");
+    } else if (e.classList.contains("additives__tag")) {
+        e.parentNode.classList.toggle("tag_bordered");
+        e.parentNode.classList.toggle("tag_selected");
+    } else if (e.classList.contains("add")){
+        e.parentNode.classList.toggle("tag_bordered");
+        e.parentNode.classList.toggle("tag_selected")
     }
 }
 
+const getAddivitiesColection  = () => {
 
-const removeSelectedTagsModalSize = (e) => {
+const addivitiesList = document.querySelectorAll(".additives .tag") 
+const totalPrice = document.querySelector(".modal-price");
+totalPrice.innerHTML = `$${defaultPrice}`
+let priceSlice = totalPrice.innerText.slice(1);
+let priceToInt  = parseFloat(priceSlice);
+let counter = 0;
+addivitiesList.forEach(tag =>  {
+    if(tag.classList.contains("tag_selected")) {
+    counter++
+    }
+})
+
+if(counter === 1) {
+    totalPrice.innerHTML  = `$${(priceToInt + 0.50).toFixed(2)}`
+    }
+    if(counter === 2) {
+        totalPrice.innerHTML  = `$${(priceToInt + 1).toFixed(2)}`
+    }
+    if(counter === 3) {
+        totalPrice.innerHTML  = `$${(priceToInt + 1.50).toFixed(2)}`
+    }
+
+
+}
+
+
+const removeSelectedTagsModalSize = () => {
     let tags = document.querySelectorAll(".size__tags .tag");
+
     tags.forEach(tag => {
         tag.classList.remove("tag_selected");
         tag.classList.add("tag_bordered");
-    })
-}
-
-const getTagActiveSize = () => {
-    let tags = document.querySelectorAll(".size__tags .tag");
-    tags.forEach((tag, index) => {
-        if(tag.classList.contains("tag_selected")) {
-            localStorage.setItem("selectedTagSize", tag.childNodes);
-            localStorage.setItem("indexSize", index);
-        }
-
-    })
-}
-
-const lastTagSize = localStorage.getItem("selectedTagSize").toLowerCase().trim();
 
 
-const priceChangeSizeTag = (e) => {
-
-    console.log(lastTagSize)
-
-// tags.forEach(tag => {
-//     if(tag.contains("tag_selected l")) {
-//         priceNum = priceNum + 1;
-//         price.innerText = `$${priceNum.toFixed(2)}`;
-//     }
-   
-// })
-   
-
-
-
+})
 
 
 }
 
+const changePriceSize = (e, defaultprice) => {
+    const totalPrice = document.querySelector(".modal-price");
+
+    let defaultPriceToNum = parseFloat(defaultprice);
+    if(e.closest(".m")) {
+        totalPrice.innerHTML = "$" + (defaultPriceToNum + 0.50).toFixed(2);
+    } else if (e.closest(".l")) {
+        totalPrice.innerHTML = "$" + (defaultPriceToNum + 1).toFixed(2);
+    } else {
+        totalPrice.innerHTML = "$" + defaultPriceToNum.toFixed(2);
+    }
+}
+
+const addSelectedTagSize = (clickedTag) => {
+    if (clickedTag.classList.contains("tag__icon")) {
+        clickedTag.parentNode.parentNode.classList.add("tag_selected");
+        clickedTag.parentNode.parentNode.classList.remove("tag_bordered");
+    }
+    else if (clickedTag.classList.contains("size") || clickedTag.classList.contains("ml")) {
+        clickedTag.parentNode.classList.add("tag_selected");
+        clickedTag.parentNode.classList.remove("tag_bordered");
+} 
+    else {
+        clickedTag.classList.add("tag_selected");
+        clickedTag.classList.remove("tag_bordered");
+    }
+}
+
+const closeModal = (e) => {
+    let classes = e.target.classList;
+    if(classes.contains("overlay") || classes.contains("button_secondary")) {
+        document.querySelector(".overlay").remove();
+        document.documentElement.style.overflow = "";
+    }
+}
