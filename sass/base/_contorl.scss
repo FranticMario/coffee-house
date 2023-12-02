@@ -20,5 +20,11 @@
 
 
 .control-selected {
+   width: 1px;  
     background:  $color-tag-selected;
 }
+
+.progress__line {
+    height: 4px;
+}
+ 

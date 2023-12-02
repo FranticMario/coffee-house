@@ -59,37 +59,77 @@
         <div class="wrapper favorite__wrapper">
             <h2 class="favorite__title">Choose your <span class="accent-word">favorite</span> coffee</h2>
                 <div class="layout-1-column">
-                    <div class="btn-circle arrow-circle">
-                        <svg class="arrow-svg arrow-left"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g>
-                            <path class="arrow-path" d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                            </svg>
 
-                    </div>
-                    <div class="coffes">
-                        <img src="./assets/img/favorite/coffee-slider-1.png" alt="" class="coffe__img">
-                        <div class="coffes__content">
-                            <h3 class="">S’mores Frappuccino</h3>
-                            <p class="coffes__text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                            <h3 class="coffe__preis">$5.50</h3>
-                        </div>
-                    </div>
-                    <div class="btn-circle arrow-circle">
-                        <svg class="arrow-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g >
-                            <path class="arrow-path" d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
-                            </g>
-                            </svg>
+                            <div class="carousel">
+                                <div class="items-container">
+                                    <div class="item active">
+                                        <div class="coffes ">
+                                            <img src="./assets/img/favorite/coffee-slider-1.png" alt="" class="coffe__img">
+                                            <div class="coffes__content">
+                                                <h3 class="">S’mores Frappuccino</h3>
+                                                <p class="coffes__text">This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                                                <h3 class="coffe__preis">$5.50</h3>
+                                                </div>
+                                            </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="coffes">
+                                            <img src="./assets/img/favorite/coffee-slider-2.png" alt="" class="coffe__img">
+                                            <div class="coffes__content">
+                                                <h3 class="">Caramel Macchiato</h3>
+                                                <p class="coffes__text">Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                                                <h3 class="coffe__preis">$5.00</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="coffes">
+                                            <img src="./assets/img/favorite/coffee-slider-3.png" alt="" class="coffe__img">
+                                            <div class="coffes__content">
+                                                <h3 class="">Ice coffee</h3>
+                                                <p class="coffes__text">TA popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                                                <h3 class="coffe__preis">$4.50</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
 
-                    </div>
+                                        <div class="control__arrow left">
+                                            <div class="btn-circle arrow-circle">
+                                                <svg class="arrow-svg arrow-left"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                    <path class="arrow-path" d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="control__arrow right">
+                                            <div class="btn-circle arrow-circle circle-right">
+                                                <svg class="arrow-svg arrow-right" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g >
+                                                    <path class="arrow-path" d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
 
-                </div>
+                                
+                    </div>
+                   
 
             <div class="control__buttons">
-                <div class="control control-selected"></div>
-                <div class="control"></div>
-                <div class="control"></div>
+                <div class="control ">
+                    <div class="progress__line control-selected"></div>
+                </div>
+                <div class="control">
+                    <div class="progress__line"></div>
+                </div>
+                <div class="control">
+                    <div class="progress__line"></div>
+                </div>
             </div>
         </div>
 
@@ -213,6 +253,7 @@
     </footer>
 
 
-<script src="./src/index.js" type="module"></script>
+<!-- <script src="./src/index.js" type="module"></script> -->
+<script src="./src/js/carousel.js"></script>
 </body>
 </html>

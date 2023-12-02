@@ -4,6 +4,7 @@
 
 .favorite__wrapper {
     text-align: center;
+
 }
 
 .favorite__title {
@@ -11,9 +12,7 @@
     padding-bottom: 40px;
 }
 
-.coffes {
-    width: 480px;
-}
+
 .coffes__text {
     @include font($size: 16px, $height: 150%, $weight: 400);
 }
@@ -28,6 +27,7 @@
 }
 
 .coffes__content {
+    width: 480px;
     padding: 16px 0px 0px;
     >* {
 
@@ -56,10 +56,117 @@
 
 }
 
-.arrow-circle {
-    @include media-mobile {
-        display: none;
-    }
-}
 
+.carousel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+  
+  .items-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .item {
+    display: none;
+    position: relative;
+    animation: 0.5s ease-in-out;
+    margin: 0 auto;
+  }
+
+  .coffes {
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    margin: 0 auto;
+  }
+
+
+  
+  .active,
+  .next {
+    display: block;
+  }
+  
+  .next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .control__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    // width: 15%;
+    cursor: pointer;
+    @media (max-width: 767px) {
+        display: none;
+        
+  }
+}
+  .control__arrow.left {
+    left: 0;
+    right: auto;
+  }
+  
+  .control__arrow.right {
+    right: 0;
+    left: auto;
+  }
+  
+  .arrow-circle {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 84px;
+  }
+  
+  .circle-right {
+    right: 50%;
+  }
+  
+  .to-left {
+    animation-name: left;
+  }
+  
+  .from-right {
+    animation-name: right;
+  }
+  
+  .to-right {
+    animation-name: right;
+    animation-direction: reverse;
+  }
+  
+  .from-left {
+    animation-name: left;
+    animation-direction: reverse;
+  }
+  
+  @keyframes left {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+  
+  @keyframes right {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
 

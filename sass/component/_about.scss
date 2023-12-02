@@ -41,9 +41,12 @@
 .photo-long {
     height: 590px;
 
+    @include media-tablet {
+    width: 688px;
+    }
     @include media-mobile {
      width: 348px;
-     }
+    }
 }
 
 .photo-small {

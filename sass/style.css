@@ -1174,7 +1174,12 @@ h3 {
 }
 
 .control-selected {
+  width: 1px;
   background: #665F55;
+}
+
+.progress__line {
+  height: 4px;
 }
 
 .offer__tags {
@@ -1601,6 +1606,8 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  height: 640px;
 }
 @media (max-width: 380px) {
   .layout-1-column {
@@ -1751,10 +1758,6 @@ h3 {
   padding-bottom: 40px;
 }
 
-.coffes {
-  width: 480px;
-}
-
 .coffes__text {
   font-size: 16px;
   font-style: normal;
@@ -1772,6 +1775,7 @@ h3 {
 }
 
 .coffes__content {
+  width: 480px;
   padding: 16px 0px 0px;
 }
 .coffes__content > * {
@@ -1799,12 +1803,115 @@ h3 {
   transform: rotate(180deg);
 }
 
-@media (max-width: 380px) {
-  .arrow-circle {
+.carousel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.items-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.coffes {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  margin: 0 auto;
+}
+
+.active,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.control__arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .control__arrow {
     display: none;
   }
 }
 
+.control__arrow.left {
+  left: 0;
+  right: auto;
+}
+
+.control__arrow.right {
+  right: 0;
+  left: auto;
+}
+
+.arrow-circle {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 84px;
+}
+
+.circle-right {
+  right: 50%;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
 .about {
   padding: 50px 0 10px;
 }
@@ -1845,6 +1952,11 @@ h3 {
 
 .photo-long {
   height: 590px;
+}
+@media (max-width: 768px) {
+  .photo-long {
+    width: 688px;
+  }
 }
 @media (max-width: 380px) {
   .photo-long {
