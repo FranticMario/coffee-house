@@ -13,13 +13,15 @@
 }
 
 
+
+
 .coffes__text {
     @include font($size: 16px, $height: 150%, $weight: 400);
 }
 
 .coffe__img {
 
-    @include media-mobile {
+    @include media-tablet-small-width {
         padding-bottom: 0px;
         width: 348px;
         height: 348px;
@@ -27,8 +29,8 @@
 }
 
 .coffes__content {
-    width: 480px;
-    padding: 16px 0px 0px;
+    // width: 480px;
+    padding: 20px 0px 0px;
     >* {
 
         margin-bottom: 16px;
@@ -36,13 +38,13 @@
     > *:last-child {
         margin-bottom: 0;
     }
-    @include media-mobile {
-        padding: 14px 0px 0px;
+    @include media-tablet-small-width {
+        padding: 20px 0px 0px;
     }
 }
 
 .control__buttons {
-    padding-top: 38px;
+    padding-top: 40px;
 
 }
 
@@ -85,6 +87,9 @@
     flex-direction: column;
     width: 480px;
     margin: 0 auto;
+    @include media-tablet-small-width {
+      width: 348px;
+    }
   }
 
 

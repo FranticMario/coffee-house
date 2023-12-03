@@ -3,6 +3,14 @@
     @extend %font-add;
     @include font($size: 16px, $weight: 600, $height: 150%);
     gap: 40px;
+    @media (max-width: 768px) {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        @include font($size: 32px, $weight: 600, $height: 125%);
+        text-align: center;
+    }
 }
 
 .navigation__link {
@@ -32,6 +40,10 @@
         }
     }
 
+    // @media (max-width: 768px) {
+     
+    // }
+
 }
 
 .link-underline {
@@ -58,14 +70,24 @@
 
         }
     }
-    
-    @include media-tablet {
+    @media (max-width: 768px) {
         display: none;
+        top: 573px;
+        right: 32px;
+     
+    }
+    
+    @include media-tablet-small-width {
+        display: none;
+        top: 573px;
+        right: 0;
+        left: 0%;
     }
 }
 
-.link-button.active {
+.link-button.active-menu {
     position: relative;
+    cursor: default;
     &::after {
         position: absolute;
         bottom: -4px;
@@ -80,7 +102,38 @@
 }
 
 .header__navigation {
-    @include media-tablet {
+    @media (max-width: 768px) {
+        // margin-bottom: 92px;
         display: none;
+        
     }
+    @include media-tablet-small-width {
+        display: none;
+        // margin-bottom: 92px;
+    }
+}
+
+.container__navigation {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+       position: absolute;
+       height: 100vh;
+       max-width: 688px;
+       top: -80px;
+       right: 268px;
+       transition: right 0.5s ease-in-out;
+    }
+
+    @include media-tablet-small-width {
+        position: absolute;
+        height: 100vh;
+        max-width: 688px;
+        top: -10%;
+        left: 35%;
+        right: 0;
+        transition: right 0.5s ease-in-out;
+    }
+
 }

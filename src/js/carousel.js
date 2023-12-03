@@ -1,5 +1,82 @@
-console.log("hello")
+function hamburger() {
+const hamburger = document.querySelector(".hamburger");
+const header = document.querySelector(".header");
+const navigation = document.querySelector(".header__navigation");
+const navigationLinkUl = document.querySelector(".navigation");
+const menuBtn  = document.querySelector(".link-button")
+const coffeCup = document.querySelector(".ico-coffe-cup") // width height 40px
+const linkBtnText = document.querySelector(".link-button__text") // text size -> 32px line height 125%
+const linkMenu = document.querySelector(".link-underline");
+const favorite = document.querySelector(".favorite");
 
+const closeByLink = (e) => {
+    !(e.target.closest('.navigation__link a')) || toggleMenu();
+
+}
+
+const closeByOberlay = (e) => {
+    !(e.target.classList.contains('overlay-header')) || toggleMenu();
+
+}
+
+const toggleMenu =  () => {
+    if(window.innerWidth > 768) return;
+    header.classList.toggle("overlay-header");
+    hamburger.classList.toggle("hamburger-active");
+    coffeCup.style.width = "40px";
+    coffeCup.style.height = "40px";
+    coffeCup.style.backgroundImage = "url()";
+    linkBtnText.style.fontSize = "32px";
+    document.documentElement.style.overflow = header.classList.contains("overlay-header") ? "hidden" : "";
+    navigation.style.display = "flex";
+    linkMenu.style.display = "flex";
+    favorite.style.display = "none"
+
+    if (!header.classList.contains("overlay-header")) {
+        coffeCup.style.width = ""; 
+        coffeCup.style.height = "";
+        coffeCup.style.backgroundImage = "url()"; 
+        linkBtnText.style.fontSize = ""; 
+        navigation.style.display = "none";
+        linkMenu.style.display = "none";
+        favorite.style.display = "block"
+    }
+
+}
+
+// const resetStyles = () => {
+//     coffeCup.style.width = ""; 
+//     coffeCup.style.height = "";
+//     coffeCup.style.backgroundImage = "url()"; 
+//     linkBtnText.style.fontSize = ""; 
+//     navigation.style.display = "none";
+//     linkMenu.style.display = "none";
+//     favorite.style.display = "block"
+// }
+
+
+
+
+hamburger.addEventListener("click", toggleMenu);
+document.addEventListener('click', closeByOberlay);
+navigationLinkUl.addEventListener("click", closeByLink);
+
+}
+hamburger()
+
+
+
+
+
+
+
+
+
+
+
+
+
+function carousel () {
 let items = document.querySelectorAll(".item");
 let currentItem = 0;
 let intervalId;
@@ -36,7 +113,6 @@ const setClassSelected = (index) => {
     if(currentIndex < 0) {
         currentIndex = 2 ;
     }
-    console.log(currentIndex)
     let progress = document.querySelectorAll(".progress__line");
     progress.forEach((tag, i) => { 
     if(currentIndex === i){
@@ -222,3 +298,7 @@ const swipeDetected = (el) => {
 
 let el = document.querySelector(".carousel");
 swipeDetected(el);
+
+}; 
+
+carousel()

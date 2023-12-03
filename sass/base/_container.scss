@@ -5,7 +5,7 @@
         padding: 100px 60px;
      }
 
-    @include media-mobile {
+    @include media-tablet-small-width{
         padding: 60px 16px;
      }
 }

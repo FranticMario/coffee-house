@@ -1,14 +1,61 @@
 import { Card } from "./js/Card.js";
 import { arr } from "./js/Card.js";
-window.onload = function() {
-    console.log("Hello");
-    getTagActive();
-    loadTagMenu(anotherVariable);
-    addTagsClickHandler();
-    addTagsClickHandlerSize();
-    window.addEventListener('click', closeModal);
-    window.addEventListener('click', refreshCard);
+function hamburger() {
+    const hamburger = document.querySelector(".hamburger");
+    const header = document.querySelector(".header");
+    const navigation = document.querySelector(".header__navigation");
+    const navigationLinkUl = document.querySelector(".navigation");
+    const menuBtn  = document.querySelector(".link-button")
+    const coffeCup = document.querySelector(".ico-coffe-cup") // width height 40px
+    const linkBtnText = document.querySelector(".link-button__text") // text size -> 32px line height 125%
+    const linkMenu = document.querySelector(".link-underline");
+    const favorite = document.querySelector(".favorite");
+    
+    const closeByLink = (e) => {
+        !(e.target.closest('.navigation__link a')) || toggleMenu();
+   
+    }
+    
+    const closeByOberlay = (e) => {
+        !(e.target.closest('.overlay-header')) ||
+         !(e.target.closest('.container__navigation')) || toggleMenu();
+    
+    }
+    
+    const toggleMenu =  () => {
+        if(window.innerWidth > 768) return;
+        header.classList.toggle("overlay-header");
+        hamburger.classList.toggle("hamburger-active");
+        coffeCup.style.width = "40px";
+        coffeCup.style.height = "40px";
+        coffeCup.style.backgroundImage = "url()";
+        linkBtnText.style.fontSize = "32px";
+        document.documentElement.style.overflow = header.classList.contains("overlay-header") ? "hidden" : "";
+        navigation.style.display = "flex";
+        linkMenu.style.display = "flex";
+
+    
+        if (!header.classList.contains("overlay-header")) {
+            coffeCup.style.width = ""; 
+            coffeCup.style.height = "";
+            coffeCup.style.backgroundImage = "url()"; 
+            linkBtnText.style.fontSize = ""; 
+            navigation.style.display = "none";
+            linkMenu.style.display = "none";
+
+        }
+    
+    }
+    
+
+    hamburger.addEventListener("click", toggleMenu);
+    document.addEventListener('click', closeByOberlay);
+    navigationLinkUl.addEventListener("click", closeByLink);
+    
 }
+
+hamburger()
+
 
 // Constants
 const cardContainer = document.querySelector(".offer-wrapper");
@@ -252,3 +299,16 @@ const refreshCard = (e) => {
     }
     
 }
+
+
+
+    
+    
+console.log("Hello");
+getTagActive();
+loadTagMenu(anotherVariable);
+addTagsClickHandler();
+addTagsClickHandlerSize();
+window.addEventListener('click', closeModal);
+window.addEventListener('click', refreshCard);
+

@@ -9,6 +9,7 @@
     height: 20px;
     background-image: url("../assets/icon/coffee-cup.svg");
     @extend %transition;
+    cursor: default;
 }
 
 

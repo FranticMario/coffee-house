@@ -22,7 +22,7 @@
         width: 630px;
      }
 
-     @include media-mobile {
+     @include media-tablet-small-width{
         width: 348px;
         padding: 40px 0 0;
      }

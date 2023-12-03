@@ -9,7 +9,7 @@
     background-size: cover;
     background-position: center;
     border-radius: 40px;
-    @include media-laptop {
+    @include media-tablet {
        max-width: 944px;
     }
    

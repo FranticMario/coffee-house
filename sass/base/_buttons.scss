@@ -60,6 +60,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    .hamburger-btn-menu {
+        @media (max-width: 768px) {
+            text-align: center;
+            .link-button__text {
+                @include font($size: 32px, $weight: 600, $height: 125%);
+                margin-right: 11px;
+            }
+            .ico {
+                width: 40px;
+                height: 40px;
+            }
+         
+        }
+    }
+   
+    
 }
 
 
@@ -93,7 +110,7 @@
 }
 
 .mobile__buttons {
-    @include media-mobile {
+    @include media-tablet-small-width {
         display: grid;
         gap: 20px;
      }
