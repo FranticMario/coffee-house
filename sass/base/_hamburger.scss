@@ -50,6 +50,7 @@
     background-color: $color-body;
     overflow: hidden;
     animation: show-overlay 0.7s ease-in-out;
+    z-index: 120;
 }
 
 @keyframes  show-overlay {

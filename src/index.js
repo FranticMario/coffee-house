@@ -17,8 +17,7 @@ function hamburger() {
     }
     
     const closeByOberlay = (e) => {
-        !(e.target.closest('.overlay-header')) ||
-         !(e.target.closest('.container__navigation')) || toggleMenu();
+        !(e.target.classList.contains('overlay-header')) || toggleMenu();
     
     }
     

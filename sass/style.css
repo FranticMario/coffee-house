@@ -898,6 +898,7 @@ template {
   background-color: #E1D4C9;
   overflow: hidden;
   animation: show-overlay 0.7s ease-in-out;
+  z-index: 120;
 }
 
 @keyframes show-overlay {
@@ -1857,12 +1858,18 @@ h3 {
   padding-bottom: 50px;
 }
 
+.intro {
+  max-height: 644px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 40px;
+}
+
 .promo__wrapper {
   display: flex;
-  background-image: url("../assets/img/promo/promo.jpg");
-  background-size: cover;
-  background-position: center;
-  border-radius: 40px;
+  position: relative;
+  padding-bottom: 56.25%;
+  z-index: 1;
 }
 @media (max-width: 1023.5px) {
   .promo__wrapper {
@@ -1870,9 +1877,27 @@ h3 {
   }
 }
 
+.video__wrapper {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.promo__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
 .promo__title {
   max-width: 530px;
   margin: 0 0 40px;
+  z-index: 2;
 }
 
 .promo__text {
@@ -1883,6 +1908,7 @@ h3 {
   font-weight: 400;
   line-height: 150%;
   color: #E1D4C9;
+  z-index: 2;
 }
 
 .favorite {
