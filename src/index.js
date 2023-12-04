@@ -73,8 +73,8 @@ const getTagActive = () => {
 
     })
 }
-const storedTag = localStorage.getItem("selectedTag").toLowerCase().trim();
-const anotherVariable =  parseInt(localStorage.getItem("anotherVariable"));
+const storedTag = localStorage.getItem("selectedTag")?.toLowerCase().trim() || "coffee";
+const anotherVariable =  parseInt(localStorage.getItem("anotherVariable") || 0);  
 
 
 const loadTagMenu = (localTag = 0) => {
