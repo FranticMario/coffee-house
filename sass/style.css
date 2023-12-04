@@ -1656,7 +1656,7 @@ h3 {
     padding-bottom: 40px;
   }
   .layout-4-column > * {
-    flex-basis: 33%;
+    flex-basis: 24%;
   }
 }
 @media (max-width: 1359.5px) and (max-width: 1359.5px) {
@@ -1673,7 +1673,7 @@ h3 {
     padding-bottom: 40px;
   }
   .layout-4-column > * {
-    flex-basis: 42%;
+    flex-basis: 33%;
   }
 }
 @media (max-width: 1023.5px) and (max-width: 1359.5px) {
