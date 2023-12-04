@@ -286,18 +286,19 @@ const closeModal = (e) => {
 }
 
 const refreshCard = (e) => {
-   const menuCard = document.querySelectorAll(".menu__card");
-   const btnRefresh = document.querySelector(".btn-refresh")
-    menuCard.forEach(card => {
-        card.style.display = "flex";
-  
-    })
+    const menuCard = document.querySelectorAll(".menu__card");
+    const btnRefresh = document.querySelector(".btn-refresh")
+    if(e.target.classList.contains("btn-refresh")) {
+         menuCard.forEach(card => {
+             card.style.display = "flex";
 
-    if(e.target.closest(".btn-refresh")) {
-        btnRefresh.style.display = "none";
-    }
+         })
+
+         if(e.target.closest(".btn-refresh")) {
+             btnRefresh.style.display = "none";
+         }
     
-}
+}}
 
 
 

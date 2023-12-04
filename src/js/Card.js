@@ -37,7 +37,7 @@ export class Card {
             <p class="card__subtitle">${this.description}</p>
         </div>
 
-        <h3 class="card__price">${this.price}</h3>
+        <h3 class="card__price">$${this.price}</h3>
         `
 
         return card;
