@@ -20,9 +20,11 @@ function hamburger() {
         !(e.target.classList.contains('overlay-header')) || toggleMenu();
     
     }
+
+    const resizeWindow = () => !(window.innerWidth > 766 && header.classList.contains('overlay-header')) || toggleMenu();
     
     const toggleMenu =  () => {
-        if(window.innerWidth > 768) return;
+
         header.classList.toggle("overlay-header");
         hamburger.classList.toggle("hamburger-active");
         coffeCup.style.width = "40px";
@@ -33,23 +35,27 @@ function hamburger() {
         navigation.style.display = "flex";
         linkMenu.style.display = "flex";
 
-    
-        if (!header.classList.contains("overlay-header")) {
+      
+        if (!header.classList.contains("overlay-header")  )  {
             coffeCup.style.width = ""; 
             coffeCup.style.height = "";
             coffeCup.style.backgroundImage = "url()"; 
             linkBtnText.style.fontSize = ""; 
             navigation.style.display = "none";
             linkMenu.style.display = "none";
-
         }
-    
+        if(window.innerWidth > 766) {
+            navigation.style.display = "flex";
+            linkMenu.style.display = "flex"
+        }
+      
     }
     
 
     hamburger.addEventListener("click", toggleMenu);
     document.addEventListener('click', closeByOberlay);
     navigationLinkUl.addEventListener("click", closeByLink);
+    window.addEventListener("resize", resizeWindow)
     
 }
 

@@ -1726,7 +1726,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .navigation {
-    margin: 0px;
+    margin: 0px 0 161px 0;
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -1796,8 +1796,7 @@ h3 {
   .link-underline {
     display: none;
     top: 573px;
-    right: 0;
-    left: 0%;
+    right: 32px;
   }
 }
 
@@ -1837,8 +1836,9 @@ h3 {
     position: absolute;
     height: 100vh;
     max-width: 688px;
-    top: -80px;
-    right: 268px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: right 0.5s ease-in-out;
   }
 }
@@ -1847,9 +1847,9 @@ h3 {
     position: absolute;
     height: 100vh;
     max-width: 688px;
-    top: -10%;
-    left: 35%;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: right 0.5s ease-in-out;
   }
 }
