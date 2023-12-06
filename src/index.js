@@ -21,8 +21,9 @@ function hamburger() {
     const toggleMenu =  () => {
         // if(window.innerWidth > 768) return;
         hamburger.classList.toggle("hamburger-active");
-        navigation.classList.toggle("navigation-show");
         navigation.classList.toggle("open")
+        navigation.classList.toggle("navigation-show");
+
         linkMenu.classList.toggle("menu-show");
         document.documentElement.style.overflow = header.classList.contains("overlay-header") ? "hidden" : "";
     }

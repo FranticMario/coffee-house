@@ -1779,7 +1779,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .container__navigation {
-    display: none;
+    display: block;
     position: absolute;
     height: 100vh;
     max-width: 100%;
@@ -1794,6 +1794,10 @@ h3 {
   }
 }
 
+.container__navigation.open {
+  left: 50%;
+}
+
 .link-button.link-underline.menu-show.menu-desktop {
   display: flex;
 }
@@ -1806,16 +1810,8 @@ h3 {
   background-image: url();
 }
 
-.navigation-show {
-  left: 50%;
-}
-
 .menu-show {
   right: 32px;
-}
-
-.open {
-  display: block;
 }
 
 @keyframes show-overlay {
