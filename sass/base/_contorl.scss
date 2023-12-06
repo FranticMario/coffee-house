@@ -9,13 +9,13 @@
     height: 4px;
     border-radius: 100px;
     background: $color-tag-border;
-    &:hover {
-        cursor: pointer;
-        background:  $color-tag-selected;
-        @include media-tablet {
-            cursor: default;
-        }
-    }
+    // &:hover {
+    //     cursor: pointer;
+    //     background:  $color-tag-selected;
+    //     @include media-tablet {
+    //         cursor: default;
+    //     }
+    // }
 }
 
 

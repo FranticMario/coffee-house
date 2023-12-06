@@ -1204,15 +1204,6 @@ h3 {
   border-radius: 100px;
   background: #C1B6AD;
 }
-.control:hover {
-  cursor: pointer;
-  background: #665F55;
-}
-@media (max-width: 1023.5px) {
-  .control:hover {
-    cursor: default;
-  }
-}
 
 .control-selected {
   width: 1px;
