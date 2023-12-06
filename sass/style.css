@@ -1798,8 +1798,10 @@ h3 {
   left: 50%;
 }
 
-.link-button.link-underline.menu-show.menu-desktop {
-  display: flex;
+@media (max-width: 768px) {
+  .link-button.link-underline.menu-show.menu-desktop {
+    display: flex;
+  }
 }
 .link-button.link-underline.menu-show.menu-desktop .link-button__text {
   font-size: 32px;
