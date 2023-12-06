@@ -21,14 +21,25 @@
     }
     
 
-        &:hover {
-            .card__img {
+        // &:hover {
+        //     .card__img {
+        //         object-fit: cover;
+        //         @extend %transition;
+        //         transform: scale(0.92);
+        //     }
+        // }
+    }
+
+@media (min-width: 768px) and (hover: hover) {
+        .menu__card:hover .card__img {
                 object-fit: cover;
-                @extend %transition;
+                transition: all .3s ease-out;
                 transform: scale(0.92);
             }
         }
-    }
+
+
+
 
 
 

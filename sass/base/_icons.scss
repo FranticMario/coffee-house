@@ -63,7 +63,18 @@
 
 .social-icon {
     @extend %transition;
-    &:hover {
+    // &:hover {
+    //     background-color:  $color-primary;
+    //     .icon-path {
+    //         stroke: $color-button-hover;
+    //     }
+
+    // }
+}
+
+
+@media (min-width: 768px) and (hover: hover) {
+    .social-icon:hover {
         background-color:  $color-primary;
         .icon-path {
             stroke: $color-button-hover;
@@ -71,3 +82,4 @@
 
     }
 }
+         

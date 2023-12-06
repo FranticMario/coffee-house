@@ -28,12 +28,20 @@
 
         }
 
-        &:hover .link-button .ico-coffe-cup {
-            display: inline-block;
-            animation: hoverLink 0.5s ease-in-out forwards;
-        }
+        // &:hover .link-button .ico-coffe-cup {
+        //     display: inline-block;
+        //     animation: hoverLink 0.5s ease-in-out forwards;
+        // }
     }
 }
+@media (min-width: 768px) and (hover: hover) {
+    .button_primary:hover .link-button .ico-coffe-cup {
+        display: inline-block;
+        animation: hoverLink 0.5s ease-in-out forwards;
+    }
+}
+
+
 
 @keyframes hoverLink {
     from {
@@ -99,15 +107,25 @@
     @include media-tablet {
         cursor: default;
     }
-    &:hover {
+    // &:hover {
+    //     background-color:  $color-tag-selected;
+    //     .download-path {
+    //         fill: $color-primary;
+    //     }
+    //     .text__info, .link-button__text {
+    //         color: $color-primary;
+    //     }
+    // }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+    .download-button:hover {
+
         background-color:  $color-tag-selected;
         .download-path {
             fill: $color-primary;
-        }
-        .text__info, .link-button__text {
-            color: $color-primary;
-        }
     }
+}
 }
 
 .mobile__buttons {
@@ -139,12 +157,22 @@
     @include media-tablet {
         cursor: default;
     }
-    &:hover {
+    // &:hover {
+    //     background-color:  $color-tag-selected;
+    //     .arrow-path {
+    //         stroke: $color-primary
+    //     }
+    //     .refresh-path {
+    //         stroke: $color-primary
+    //     }
+
+    // }
+}
+
+@media (min-width: 768px) and (hover: hover) {
+    .btn-circle:hover {
         background-color:  $color-tag-selected;
         .arrow-path {
-            stroke: $color-primary
-        }
-        .refresh-path {
             stroke: $color-primary
         }
 
