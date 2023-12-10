@@ -25,7 +25,7 @@ function hamburger() {
         navigation.classList.toggle("navigation-show");
 
         linkMenu.classList.toggle("menu-show");
-        document.documentElement.style.overflow = header.classList.contains("overlay-header") ? "hidden" : "";
+        document.documentElement.style.overflow = navigation.classList.contains("navigation-show") ? "hidden" : "";
     }
 
     hamburger.addEventListener("click", toggleMenu);
@@ -193,9 +193,12 @@ const getAddivitiesColection  = () => {
 
 const addivitiesList = document.querySelectorAll(".additives .tag") 
 const totalPrice = document.querySelector(".modal-price");
-totalPrice.innerHTML = `$${defaultPrice}`
+// console.log(totalPrice)
+// // totalPrice.innerHTML = `$${arr}`
 let priceSlice = totalPrice.innerText.slice(1);
 let priceToInt  = parseFloat(priceSlice);
+
+
 let counter = 0;
 addivitiesList.forEach(tag =>  {
     if(tag.classList.contains("tag_selected")) {
@@ -211,7 +214,7 @@ if(counter === 1) {
     }
     if(counter === 3) {
         totalPrice.innerHTML  = `$${(priceToInt + 1.50).toFixed(2)}`
-    }
+    } 
 
 
 }
@@ -233,6 +236,13 @@ const removeSelectedTagsModalSize = () => {
 const changePriceSize = (e, defaultprice) => {
     const totalPrice = document.querySelector(".modal-price");
 
+    const addivitiesList = document.querySelectorAll(".additives .tag");
+
+    addivitiesList.forEach(tag => {
+        console.log(tag)
+        tag.classList.remove("tag_selected");
+        tag.classList.add("tag_bordered");
+    })
     let defaultPriceToNum = parseFloat(defaultprice);
     if(e.closest(".m")) {
         totalPrice.innerHTML = "$" + (defaultPriceToNum + 0.50).toFixed(2);

@@ -24,7 +24,7 @@ const toggleMenu =  () => {
     navigation.classList.toggle("navigation-show");
     navigation.classList.toggle("open")
     linkMenu.classList.toggle("menu-show");
-    document.documentElement.style.overflow = header.classList.contains("overlay-header") ? "hidden" : "";
+    document.documentElement.style.overflow = navigation.classList.contains("navigation-show") ? "hidden" : "";
 }
 
 hamburger.addEventListener("click", toggleMenu);
