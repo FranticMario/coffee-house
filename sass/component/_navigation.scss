@@ -117,7 +117,7 @@
     flex-grow: 1;
 
     @media (max-width: 768px) {
-        display: block;
+       display: none;
        position: absolute;
        height: 100vh;
        max-width: 100%;
@@ -134,6 +134,7 @@
 }
 
 .container__navigation.open {
+    display: block;
     left: 50%;
 }
 
