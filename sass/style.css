@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Normalize.scss settings
    ========================================================================== */
@@ -496,6 +497,17 @@ a {
   color: inherit;
 }
 
+@media (max-width: 767px) {
+  a {
+    cursor: default; /* Устанавливаем курсор по умолчанию */
+  }
+}
+/* Для экранов от 768 пикселей и выше, показываем pointer */
+@media (min-width: 768px) and (hover: hover) {
+  a {
+    cursor: pointer;
+  }
+}
 h1, h2, h3, h4, h5, h6, p {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -663,6 +675,9 @@ h3 {
   }
   .download-button:hover .download-path {
     fill: #E1D4C9;
+  }
+  .download-button:hover .text__info, .download-button:hover .link-button__text {
+    color: #E1D4C9;
   }
 }
 @media (max-width: 767.5px) {
@@ -1897,7 +1912,7 @@ h3 {
 }
 
 @media (min-width: 768px) and (hover: hover) {
-  .location, .tel:hover::before {
+  .location:hover::before, .tel:hover::before {
     transform: scaleX(1);
     transition: transform 0.25s;
     transform-origin: left;

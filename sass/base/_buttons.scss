@@ -107,24 +107,25 @@
     @include media-tablet {
         cursor: default;
     }
-    // &:hover {
-    //     background-color:  $color-tag-selected;
-    //     .download-path {
-    //         fill: $color-primary;
-    //     }
-    //     .text__info, .link-button__text {
-    //         color: $color-primary;
-    //     }
-    // }
+
 }
 
 @media (min-width: 768px) and (hover: hover) {
     .download-button:hover {
 
-        background-color:  $color-tag-selected;
-        .download-path {
-            fill: $color-primary;
-    }
+       
+            background-color:  $color-tag-selected;
+            .download-path {
+                fill: $color-primary;
+            }
+            .text__info, .link-button__text {
+                color: $color-primary;
+            }
+        
+    //     background-color:  $color-tag-selected;
+    //     .download-path {
+    //         fill: $color-primary;
+    // }
 }
 }
 
@@ -153,6 +154,7 @@
     border-radius: 100px;
     border: 1px solid;
     cursor: pointer;
+
     @extend %transition;
     @include media-tablet {
         cursor: default;
@@ -167,6 +169,8 @@
     //     }
 
     // }
+
+
 }
 
 @media (min-width: 768px) and (hover: hover) {
@@ -177,6 +181,7 @@
         }
 
     }
+
 
 }
 

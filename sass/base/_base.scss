@@ -18,7 +18,23 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+
+
 }
+
+@media (max-width: 767px) {
+    a {
+        cursor: default; /* Устанавливаем курсор по умолчанию */
+    }
+}
+
+/* Для экранов от 768 пикселей и выше, показываем pointer */
+@media (min-width: 768px) and (hover: hover) {
+    a {
+        cursor: pointer;
+    }
+}
+
 
 h1, h2, h3, h4, h5, h6, p {
     margin-block-start: 0;
