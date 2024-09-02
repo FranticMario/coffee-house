@@ -1,5 +1,7 @@
 import { Card } from "./js/Card.js";
 import { arr } from "./js/Card.js";
+// import { priceChange } from "./js/price.js";
+
 function hamburger() {
     const hamburger = document.querySelector(".hamburger");
     const header = document.querySelector(".header");
@@ -157,15 +159,11 @@ const addTagsClickHandlerSize = () => {
             addSelectedTagSize(sizeTag);
             getNewSizePrice(defaultPrice)
         }
-
-        if(sizeTag.closest(".additives")) {
-
-            addSelectedTagAdditivies(sizeTag);
-            getAddivitiesColection()
-        }
     });
     
 }
+
+
 
 const  getNewSizePrice = () => {
     const totalPrice = document.querySelector(".modal-price");
@@ -175,49 +173,6 @@ const  getNewSizePrice = () => {
 }
 
 
-const addSelectedTagAdditivies = (e) => {
-
-    if(e.classList.contains("tag")) {
-        e.classList.toggle("tag_bordered");
-        e.classList.toggle("tag_selected");
-    } else if (e.classList.contains("additives__tag")) {
-        e.parentNode.classList.toggle("tag_bordered");
-        e.parentNode.classList.toggle("tag_selected");
-    } else if (e.classList.contains("add")){
-        e.parentNode.classList.toggle("tag_bordered");
-        e.parentNode.classList.toggle("tag_selected")
-    }
-}
-
-const getAddivitiesColection  = () => {
-
-const addivitiesList = document.querySelectorAll(".additives .tag") 
-const totalPrice = document.querySelector(".modal-price");
-// console.log(totalPrice)
-// // totalPrice.innerHTML = `$${arr}`
-let priceSlice = totalPrice.innerText.slice(1);
-let priceToInt  = parseFloat(priceSlice);
-
-
-let counter = 0;
-addivitiesList.forEach(tag =>  {
-    if(tag.classList.contains("tag_selected")) {
-    counter++
-    }
-})
-
-if(counter === 1) {
-    totalPrice.innerHTML  = `$${(priceToInt + 0.50).toFixed(2)}`
-    }
-    if(counter === 2) {
-        totalPrice.innerHTML  = `$${(priceToInt + 1).toFixed(2)}`
-    }
-    if(counter === 3) {
-        totalPrice.innerHTML  = `$${(priceToInt + 1.50).toFixed(2)}`
-    } 
-
-
-}
 
 
 const removeSelectedTagsModalSize = () => {
@@ -235,6 +190,7 @@ const removeSelectedTagsModalSize = () => {
 
 const changePriceSize = (e, defaultprice) => {
     const totalPrice = document.querySelector(".modal-price");
+
 
     const addivitiesList = document.querySelectorAll(".additives .tag");
 
@@ -302,4 +258,5 @@ addTagsClickHandler();
 addTagsClickHandlerSize();
 window.addEventListener('click', closeModal);
 window.addEventListener('click', refreshCard);
+
 

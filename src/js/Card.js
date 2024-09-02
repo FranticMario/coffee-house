@@ -1,5 +1,7 @@
 export let arr ;
 
+export let cardArr = {};
+
 export class Card {
     constructor ({name, description, price, category, urlToImage, sizes, additives}) {
         this.name = name;
@@ -25,6 +27,11 @@ export class Card {
 
         card.addEventListener("click", () => {
             arr = this.price
+            cardArr = {
+                name: this.name,
+                price: this.price,
+                sizes: this.sizes,
+            }
         })
         card.innerHTML =
         `
@@ -61,7 +68,8 @@ export class Card {
                 </p>
                 <div class="size__tags tags">
                     <div class="tag tag_selected s">
-                        <span class="size tag-icon s">S</span><span class="ml s">${this.sizes.s.size}</span>
+                        <span class="size tag-icon s">S</span>
+                        <span class="ml s">${this.sizes.s.size}</span>
                     </div>
                     <div class="tag tag_bordered m">
                         <span class="size tag-icon m">M</span><span class="ml m">${this.sizes.m.size}</span>
@@ -105,6 +113,8 @@ export class Card {
 
        return popup;
     }
+
+
 
 
 
