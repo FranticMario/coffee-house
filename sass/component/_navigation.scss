@@ -32,15 +32,27 @@
         transform: scaleX(0);
         transition: transform 0.25s;
     }
-    &:hover {
-        &::before {
-            transform: scaleX(1);
-            transition: transform 0.25s;
-            transform-origin: left;
+    // &:hover {
+    //     &::before {
+    //         transform: scaleX(1);
+    //         transition: transform 0.25s;
+    //         transform-origin: left;
 
-        }
-    }
+    //     }
+    // }
 
+}
+
+@media (min-width: 768px) and (hover: hover) {
+    .navigation__link {
+        &:hover {
+            &::before {
+                transform: scaleX(1);
+                transition: transform 0.25s;
+                transform-origin: left;
+    
+            }
+        }}
 
 
 }
