@@ -84,7 +84,7 @@ const addTagsClickHandler = () => {
                 addSelectedTag(clickedTag);
                 getTagActive();
                 generateCard(dataArray, cardContainer, clickedTag.innerText);
-                addClickHanderMenuCard()
+                btnRefresh.style.display = "flex";
 
         }
     });
@@ -232,22 +232,37 @@ const closeModal = (e) => {
     }
 }
 
+// const refreshCard = (e) => {
+//     const menuCard = document.querySelectorAll(".menu__card");
+//     const btnRefresh = document.querySelector(".btn-refresh");
+//     console.log(e.currentTarget)
+//     if(e.target.classList.contains("btn-refresh")) {
+//          menuCard.forEach(card => {
+//              card.style.display = "flex";
+
+//          })
+
+//          if(e.target.closest(".btn-refresh")) {
+//              btnRefresh.style.display = "none";
+//          } else {
+//             btnRefresh.style.display = "block";
+//          }
+    
+// }}
+
+const btnRefresh = document.querySelector(".btn-refresh");
+
 const refreshCard = (e) => {
     const menuCard = document.querySelectorAll(".menu__card");
-    const btnRefresh = document.querySelector(".btn-refresh")
-    if(e.target.classList.contains("btn-refresh")) {
-         menuCard.forEach(card => {
-             card.style.display = "flex";
 
-         })
-
-         if(e.target.closest(".btn-refresh")) {
-             btnRefresh.style.display = "none";
-         }
-    
-}}
+    menuCard.forEach(card => {
+                     card.style.display = "flex";
+                     btnRefresh.style.display = "none";
+                })
+}
 
 
+btnRefresh.addEventListener('click', refreshCard);
 
     
     
@@ -257,6 +272,6 @@ loadTagMenu(anotherVariable);
 addTagsClickHandler();
 addTagsClickHandlerSize();
 window.addEventListener('click', closeModal);
-window.addEventListener('click', refreshCard);
+
 
 
