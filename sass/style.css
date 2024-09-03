@@ -1317,6 +1317,7 @@ h3 {
   }
 }
 .link-underline {
+  position: relative;
   gap: 8px;
   transition: right 0.9s ease-in-out;
 }
@@ -1340,6 +1341,7 @@ h3 {
 }
 @media (max-width: 768px) {
   .link-underline {
+    position: unset;
     top: 573px;
     right: -600px;
   }

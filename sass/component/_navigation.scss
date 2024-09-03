@@ -58,7 +58,7 @@
 }
 
 .link-underline {
-    // position: relative;
+    position: relative;
     gap: 8px;
     transition: right 0.9s ease-in-out;
     &:before {
@@ -83,7 +83,7 @@
         }
     }
     @media (max-width: 768px) {
-
+        position: unset;
         top: 573px;
         right: -600px;
      
