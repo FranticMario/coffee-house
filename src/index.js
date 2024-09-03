@@ -12,22 +12,28 @@ function hamburger() {
 
     const closeByLink = (e) => {
         !(e.target.closest('.navigation__link a')) || toggleMenu();
+        
     }
 
     const closeByOberlay = (e) => {
+
         !(e.target.classList.contains('header__navigation')) || toggleMenu();
+        
     }
 
-    const resizeWindow = () => !(window.innerWidth > 766 && header.classList.contains('overlay-header')) || toggleMenu();
+    const resizeWindow = () => !(window.innerWidth > 766 && header.classList.contains('overlay-header')) || toggleMenu(); 
+
+
 
     const toggleMenu =  () => {
-        // if(window.innerWidth > 768) return;
+        console.log("Ширина окна: ", window.innerWidth);
+        if(window.innerWidth < 768) return; 
         hamburger.classList.toggle("hamburger-active");
         navigation.classList.toggle("open")
         navigation.classList.toggle("navigation-show");
-
         linkMenu.classList.toggle("menu-show");
         document.documentElement.style.overflow = navigation.classList.contains("navigation-show") ? "hidden" : "";
+
     }
 
     hamburger.addEventListener("click", toggleMenu);
